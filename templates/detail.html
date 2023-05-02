@@ -1,47 +1,28 @@
 {% extends 'base.html' %}
 
+
 {% block sidebar %}
-    
+    <div class="detail-side">
+        <h3><a href="{% url 'home_url'%}">Home</a></h3>
+        <h3><a href="{% url 'category_url' 'bom-comparison' %}">BOM Comparison</a></h3>
+        <h3><a href="{% url 'category_url' 'cost-review' %}">Cost Review</a></h3>
+    </div>
 {% endblock %}
 
 {% block container %}
+{% load static %}
+<script src="{% static 'js/graph.js' %}"></script> 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <div class="detail-graph">
     <canvas id="myChart" width="500"></canvas>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<script>
-    const ctx = document.getElementById('myChart');
-
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            borderWidth: 1
-        }]
-        },
-        options: {
-        scales: {
-            y: {
-            beginAtZero: true
-            }
-        }
-        }
-    });
-</script>
 {% endblock %}
 
 {% block navigator %}
     <div class="detail-title">
         <h2><strong>{{ post_detail.title }}</strong></h2>
         <time>{{ post_detail.date_added|date:"d M, y h:i" }}</time>
-        <a href="{% url 'category_url' post_detail.category.slug %}">{{ post_detail.category.title }}</a>
-        <p><strong>{{ post_detail.title }}</strong></p>
-        <p>{{ post_detail.body }}</p>
+        <br/><a href="{% url 'category_url' post_detail.category.slug %}">Review All {{ post_detail.category.title }}</a>
     </div>
     <div class="detail-comment">
         <h2>Comments</h2>

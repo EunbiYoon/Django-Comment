@@ -309,6 +309,22 @@ footer h5{
 }
   
 /* detail.html - container */
+.detail-side{
+  text-align: center;
+}
+.detail-side h3{
+  background-color: #D0DAEE;
+  padding:10px;
+}
+.detail-side h3:hover{
+  background-color: #e3eed0;
+  color:blue;
+  font-weight: 1800;
+}
+.detail-side a{
+  background-color: #D0DAEE;
+  text-decoration: none;
+}
 .detail-graph{
   width: 90%;
   margin: auto;
