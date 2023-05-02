@@ -226,18 +226,11 @@ footer a{
   font-weight: 600;
   border-color: 1px solid white;
 }
-
-.register-login .submitbutton:hover{
-  color:white;
-  cursor: pointer;
-  font-weight:600;
-  background-color:#17D4FE;
-}
-
 .register-login input{
   text-align: center;
   font-family: 'Montserrat';
   font-weight: 600;
+  margin:30px 0;
 }
 
 .register-login h1{
@@ -259,6 +252,7 @@ footer a{
       background-position: 100% -100%;
   }
 }
+/*register*/
 .register form{
   background-color:azure;
   border: #17D4FE 5px solid;
@@ -282,23 +276,7 @@ footer a{
 .register .button-box{
   text-align: center;
 }
-
-.login form .text-center button{
-  font-family:'Montserrat';
-  background-color: aquamarine;
-  color:black;
-  align-items: right;
-  grid-column: 2;
-  grid-row: 1;
-  margin:auto;
-  width: 100%;
-  height: 100%;
-  border-top: transparent;
-  border-bottom: transparent;
-  border-right: transparent;
-  border-left: #17D4FE 5px solid;
-}
-
+/*login*/
 .login form{
   margin:50px;
   display: grid;
@@ -315,8 +293,6 @@ footer a{
   align-items: right;
 }
 .login button {
-  background-color: aquamarine;
-  color:black;
   align-items: right;
   font-size: 1.2rem;
   grid-column: 2;
