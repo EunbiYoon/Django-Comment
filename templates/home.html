@@ -20,17 +20,14 @@
 
 {% block container %}
     <div class="home-container">
-        <a class="box-item1" href="{% url 'register_url' %}">
+        <a class="box-item1" href="{% url 'category_url' 'bom-comparison' %}">
             <h2>BOM Comparison</h2>
         </a>
-        <a class="box-item2" href="{% url 'register_url' %}">
+        <a class="box-item2" href="{% url 'category_url' 'cost-review' %}">
             <h2>Cost Review</h2>
         </a>
-        <a class="box-item3" href="{% url 'register_url' %}">
-            <h2>Coming Soon!</h2>
-        </a>
-        <a class="box-item4"href="{% url 'register_url' %}">
-            <h2>Coming Soon!</h2>
+        <a class="box-item3" href="{% url 'category_url' 'vi-activity' %}">
+            <h2>VI Activity</h2>
         </a>
     </div>
 {% endblock%}
