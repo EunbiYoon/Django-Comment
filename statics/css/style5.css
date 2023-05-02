@@ -196,43 +196,6 @@ footer a{
   background-size: 100% 300%;
   font-size: 3rem;
 }
-.register-login{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap:10px;
-  text-align: center;
-  margin-top:50px;
-}
-.register{
-  grid-column:1;
-}
-.login{
-  grid-column:2;
-}
-
-.register-login p{
-  color:red;
-  font-weight: 800;
-}
-
-.register-login .submitbutton{
-  background-color: aquamarine;
-  color:black;
-  align-items: right;
-  font-size: 1.2rem;
-  margin:20px 0;
-  padding:5px 10px;
-  font-family:'Montserrat';
-  font-weight: 600;
-  border-color: 1px solid white;
-}
-.register-login input{
-  text-align: center;
-  font-family: 'Montserrat';
-  font-weight: 600;
-  margin:30px 0;
-}
-
 .register-login h1{
   background: linear-gradient(#10abff, #1beabd 5%, #10abff 40%);
   background-clip: text;
@@ -252,6 +215,46 @@ footer a{
       background-position: 100% -100%;
   }
 }
+.register-login{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:10px;
+  text-align: center;
+  margin-top:50px;
+}
+.register{
+  grid-column:1;
+}
+.login{
+  grid-column:2;
+}
+
+.register-login p{
+  color:red;
+  font-weight: 800;
+}
+.register-login .submitbutton{
+  background-color: aquamarine;
+  color:black;
+  align-items: right;
+  font-size: 1.2rem;
+  padding:5px 10px;
+  font-family:'Montserrat';
+  font-weight: 600;
+  border-color: 1px solid white;
+}
+.register-login .submitbutton:hover{
+  color:white;
+  cursor: pointer;
+  font-weight:600;
+  background-color:#17D4FE;
+}
+.register-login input{
+  text-align: center;
+  font-family: 'Montserrat';
+  font-weight: 600;
+}
+
 /*register*/
 .register form{
   background-color:azure;
@@ -269,6 +272,9 @@ footer a{
 .register input{
   width:350px;
 }
+.register button{
+  margin:20px 0;
+}
 .register form{
   color:rgba(0, 0, 0, 0.557);
   margin:30px 120px;
@@ -276,21 +282,29 @@ footer a{
 .register .button-box{
   text-align: center;
 }
+
 /*login*/
+.register-login-title{
+  text-align: center;
+}
 .login form{
-  margin:50px;
+  margin:0px 80px;
   display: grid;
   grid-template-columns: 4fr 1fr;
   gap: 10px;
   background-color:azure;
   border: #17D4FE 5px solid;
   font-weight: 600;
+  text-align: center;
 }
 .login .login-banner{
   display: grid;
   grid-column: 1;
   grid-row: 1;
   align-items: right;
+}
+.login .login-column{
+  margin: 20px 0;
 }
 .login button {
   align-items: right;
