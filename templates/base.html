@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Fontstyle -->
-    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     
     <!-- Title -->
     <title>{% block title %}My Blog{% endblock %}</title>
 
     <!-- Stylesheet -->
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style3.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/style5.css' %}"> 
 
   </head>
   <body>
@@ -32,14 +32,10 @@
         <div class="user-banner">
           {% if user.is_authenticated %}
             <p>Hello, {{user.username}}
-            <button>
-                <a href="{% url 'logout_url' %}">Logout</a>
-            </button>
+            <a href="{% url 'logout_url' %}">Logout</a>
           {% else %}
             <p>Login Here
-            <button>
-                <a href="{% url 'login_url' %}">Login</a>
-            </button>
+            <a href="{% url 'login_url' %}">Login</a>
           {% endif %}
           </p>
         </div>

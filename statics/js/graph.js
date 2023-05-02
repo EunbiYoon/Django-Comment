@@ -1,5 +1,3 @@
-
-
 window.addEventListener('DOMContentLoaded', event => {
     // Toggle the side navigation
     const ctx = document.getElementById('myChart');

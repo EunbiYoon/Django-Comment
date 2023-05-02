@@ -1,7 +1,8 @@
 /*templates grid*/
 body{
   margin:auto;
-  font-family: 'Orbitron';
+  font-family: 'Montserrat';
+  overflow-y: scroll;
 }
 .top{
   display: grid;
@@ -19,15 +20,15 @@ body{
 }
 .sidebar{
   grid-column: 1;
-  background-color:antiquewhite;
+  /* background-color:antiquewhite; */
 }
 .container{
   grid-column: 2;
-  background-color:#D0DAEE;
+  /* background-color:#D0DAEE; */
 }
 .navigator{
   grid-column: 3;
-  background-color:pink;
+  /* background-color:pink; */
 }
 
 /*top container*/
@@ -64,20 +65,24 @@ body{
   font-weight: 800;
   text-align: center;
 }
-.top .navigator .user-banner button{
-  background-color: antiquewhite;
+
+.top .navigator .user-banner a{
+  background-color: aquamarine;
   margin: 0 10px;
   width:100px;
-  font-size:1rem;
+  font-size:1.2rem;
   margin-top:10px;
+  font-family:'Montserrat';
+  font-weight: 800;
+  color:black;
+  text-decoration: none;
+  padding:3px 15px;
+  border: 1px solid black;
 }
-.top .navigator .user-banner button:hover{
-  background-color: aqua;
+.top .navigator .user-banner a:hover{
+  background-color: #17D4FE;
   color:white;
   cursor:pointer;
-}
-.top .navigator .user-banner button a{
-  text-decoration: none;
 }
 
 /* main container */
@@ -102,12 +107,16 @@ footer{
   left:0;
   width:100%;
   height: 70px;
-  background-color: #D0DAEE;
+  background-color:azure;
 }
 footer h5{
   font-size: 1rem;
   text-align: center;
-  color:blue;
+  color:rgb(139, 139, 139);
+}
+footer a{
+  text-decoration: none;
+  color:#1beabd
 }
 
 
@@ -175,11 +184,24 @@ footer h5{
 
 
 /*login.html*/
+.register-login-title{
+  background: linear-gradient(#10abff, #1beabd 5%, #10abff 40%);
+  background-clip: text;
+  background-color: #da1b60;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  animation: TransitioningBackground 2s linear infinite;
+  background-size: 100% 300%;
+  font-size: 3rem;
+}
 .register-login{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap:10px;
   text-align: center;
+  margin-top:50px;
 }
 .register{
   grid-column:1;
@@ -187,6 +209,37 @@ footer h5{
 .login{
   grid-column:2;
 }
+
+.register-login p{
+  color:red;
+  font-weight: 800;
+}
+
+.register-login .submitbutton{
+  background-color: aquamarine;
+  color:black;
+  align-items: right;
+  font-size: 1.2rem;
+  margin:20px 0;
+  padding:5px 10px;
+  font-family:'Montserrat';
+  font-weight: 600;
+  border-color: 1px solid white;
+}
+
+.register-login .submitbutton:hover{
+  color:white;
+  cursor: pointer;
+  font-weight:600;
+  background-color:#17D4FE;
+}
+
+.register-login input{
+  text-align: center;
+  font-family: 'Montserrat';
+  font-weight: 600;
+}
+
 .register-login h1{
   background: linear-gradient(#10abff, #1beabd 5%, #10abff 40%);
   background-clip: text;
@@ -207,21 +260,20 @@ footer h5{
   }
 }
 .register form{
-  background-color: antiquewhite;
-  border:5px solid slateblue
+  background-color:azure;
+  border: #17D4FE 5px solid;
 }
 .register .register-column{
   margin:20px;
 }
 .register label{
-  color:rgb(97, 0, 253);
+  color:black;
   font-size: 1rem;
   font-weight: 600;
+  padding:0 30px;
 }
 .register input{
-  font-size: 1rem;
   width:350px;
-  align-items: center;
 }
 .register form{
   color:rgba(0, 0, 0, 0.557);
@@ -230,26 +282,12 @@ footer h5{
 .register .button-box{
   text-align: center;
 }
-.register button{
+
+.login form .text-center button{
+  font-family:'Montserrat';
   background-color: aquamarine;
   color:black;
   align-items: right;
-  font-size: 1.2rem;
-  font-family: 'Orbitron';
-  margin:20px 0;
-  padding:5px 10px;
-}
-.register button:hover{
-  color:#146578;
-  cursor: pointer;
-  font-weight:600;
-  background-color:antiquewhite;
-}
-.login button{
-  background-color: aquamarine;
-  color:black;
-  align-items: right;
-  font-size: 1.2rem;
   grid-column: 2;
   grid-row: 1;
   margin:auto;
@@ -259,13 +297,8 @@ footer h5{
   border-bottom: transparent;
   border-right: transparent;
   border-left: #17D4FE 5px solid;
-  font-family: 'Orbitron';
 }
-.login button:hover{
-  color:rgb(171, 171, 171);
-  cursor: pointer;
-  font-weight:600;
-}
+
 .login form{
   margin:50px;
   display: grid;
@@ -281,12 +314,7 @@ footer h5{
   grid-row: 1;
   align-items: right;
 }
-.login input{
-  font-size: 1.2rem;
-  text-align: center;
-  margin:20px;
-}
-.login button{
+.login button {
   background-color: aquamarine;
   color:black;
   align-items: right;
@@ -300,13 +328,8 @@ footer h5{
   border-bottom: transparent;
   border-right: transparent;
   border-left: #17D4FE 5px solid;
-  font-family: 'Orbitron';
 }
-.login button:hover{
-  color:rgb(171, 171, 171);
-  cursor: pointer;
-  font-weight:600;
-}
+
   
 /* detail.html - container */
 .detail-side{
@@ -357,4 +380,13 @@ footer h5{
 }
 .detail-comment label{
   display: none;
+}
+
+
+/* category.html - container */
+.category-main{
+  color:green;
+  background-color: antiquewhite;
+  width: 50%;
+  margin: auto;
 }
