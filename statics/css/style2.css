@@ -3,7 +3,8 @@ body{
   margin:auto;
   font-family: 'Montserrat';
   overflow-y: scroll;
-  background: linear-gradient(18deg, #000000, #a58fe9);
+  /* background: linear-gradient(18deg, #ffffff, #a58fe9); */
+  height:100%
 }
 .top{
   display: grid;
@@ -323,24 +324,26 @@ footer a{
 /* detail.html - container */
 .detail-side{
   text-align: center;
-}
-.detail-side h3{
-  background-color: #D0DAEE;
-  padding:10px;
-}
-.detail-side h3:hover{
-  background-color: #e3eed0;
-  color:blue;
-  font-weight: 1800;
+  background-color: #17D4FE;
+  padding:5px;
+  margin:20px;
 }
 .detail-side a{
-  background-color: #D0DAEE;
   text-decoration: none;
 }
-.detail-graph{
-  width: 90%;
-  margin: auto;
+.detail-side .detail-url{
+  background-color:yellow;
+  color:black;
+  text-decoration: none;
+  margin:20px;
+  padding:10px;
 }
+.detail-side .detail-url:hover{
+  color:red;
+  background-color: #1beabd;
+}
+
+
 
 /* detail.html - navigator */
 .detail-title, .detail-comment{

@@ -1,12 +1,14 @@
 from django.shortcuts import render,redirect, get_object_or_404
 from .models import Category, Post, Comment
 from .forms import CommentForm
-import datetime
+
 
 def homeView(request):
-    posts = Post.objects.all()
+    posts = list(Post.objects.all())[:3]
+    counts=[1,2,3,4,5]
     context={
-        'posts_set':posts
+        'posts_set':posts,
+        'posts_count':counts
     }
     return render(request, 'home.html', context)
 

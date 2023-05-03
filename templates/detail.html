@@ -3,9 +3,18 @@
 
 {% block sidebar %}
     <div class="detail-side">
-        <h3><a href="{% url 'home_url'%}">Home</a></h3>
-        <h3><a href="{% url 'category_url' 'bom-comparison' %}">BOM Comparison</a></h3>
-        <h3><a href="{% url 'category_url' 'cost-review' %}">Cost Review</a></h3>
+        <a href="{% url 'home_url' %}">
+            <div class="detail-url">Home</div>
+        </a>
+        <a href="{% url 'category_url' 'bom-comparison' %}">
+            <div class="detail-url">BOM Comparison</div>
+        </a>
+        <a href="{% url 'category_url' 'cost-review' %}">
+            <div class="detail-url">Cost Review</div>
+        </a>
+        <a href="{% url 'category_url' 'vi-activity' %}">
+            <div class="detail-url">VI Activity</div>
+        </a>
     </div>
 {% endblock %}
 
