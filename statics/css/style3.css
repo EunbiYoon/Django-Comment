@@ -181,9 +181,20 @@ footer a{
   cursor:pointer;
   transition:.5s;
 }
-.hpp:hover{
-  background-color: #10abff;
+.home-container .hexagonArea .hexagon:hover{
+  background-color: deepskyblue;
+  transform: scale(0.8);
 
+}
+.home-container .hexagonArea .hexagon img{
+  width: 80px;
+}
+.home-container .hexagonArea .hexagon h3{
+  /* text-transform: uppercase; */
+  font-weight: 800;
+  margin-top:10px;
+  font-size:17px;
+  letter-spacing: 1px;
 }
 
 
