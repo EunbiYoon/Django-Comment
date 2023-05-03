@@ -34,24 +34,7 @@ body{
 .top .container h1{
   padding-left:50px;
 }
-.top .cotainer .user-name .typing-demo span{
-  color:green
-}
-@keyframes typing {
-  from {
-      width: 0
-  }
-}  
-@keyframes blink {
-  50% {
-      border-color: transparent
-  }
-}
-@keyframes blink{
-  50% {
-      border-color: transparent
-  }
-}
+
 
 /*top navigator*/
 .top .navigator p{
@@ -118,6 +101,11 @@ footer a{
 
 
 /*home.html*/
+.home-name{
+  text-align: center;
+  font-size: 3rem;
+}
+
 .home-history{
   background-color:aliceblue;
   text-align: center;
@@ -159,7 +147,11 @@ footer a{
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: 50px 150px;
+  margin: 50px auto;
+}
+.home-container a{
+  text-decoration: none;
+  color:black;
 }
 .home-container .hexagonArea{
   display: flex;
@@ -184,6 +176,7 @@ footer a{
 .home-container .hexagonArea .hexagon:hover{
   background-color: deepskyblue;
   transform: scale(0.8);
+  color:white;
 
 }
 .home-container .hexagonArea .hexagon img{

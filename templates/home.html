@@ -2,6 +2,8 @@
 
 {% block title %}Home{% endblock %}
 
+{% block name %}<div class="home-name">Welcome to Data Center</div>{% endblock %}
+
 {% block sidebar %}
     <div class="home-history">
         <div class="name">Recent Report</div>
@@ -21,18 +23,24 @@
 {% block container %}
     <div class="home-container">
         <div class="hexagonArea first">
-            <div class="hexagon">
-                <img src="https://img.icons8.com/wired/64/null/compare.png"/>
-                <h3>BOM Comparion</h3>
-            </div>
-            <div class="hexagon">
-                <img src="https://img.icons8.com/ios/50/null/combo-chart--v1.png"/>
-                <h3>Cost Review</h3>
-            </div>
-            <div class="hexagon">
-                <img src="https://img.icons8.com/wired/64/null/low-price.png"/>
-                <h3>VI Activity</h3>
-            </div>
+            <a href="{% url 'category_url' 'bom-comparison'%}">
+                <div class="hexagon">
+                    <img src="https://img.icons8.com/wired/64/null/compare.png"/>
+                    <h3>BOM Comparion</h3>
+                </div>
+            </a>
+            <a href="{% url 'category_url' 'cost-review'%}">
+                <div class="hexagon">
+                    <img src="https://img.icons8.com/ios/50/null/combo-chart--v1.png"/>
+                    <h3>Cost Review</h3>
+                </div>
+            </a>
+            <a href="{% url 'category_url' 'vi-activity'%}">
+                <div class="hexagon">
+                    <img src="https://img.icons8.com/wired/64/null/low-price.png"/>
+                    <h3>VI Activity</h3>
+                </div>
+            </a>
         </div>
         <div class="hexagonArea last">
             <div class="hexagon">
