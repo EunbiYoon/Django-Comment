@@ -33,30 +33,27 @@
 
 {% block navigator %}
     <div class="detail-title">
-        <h2><strong>{{ post_detail.title }}</strong></h2>
-        <time>{{ post_detail.date_added|date:"d M, y h:i" }}</time>
-        <br/><a href="{% url 'category_url' post_detail.category.slug %}">Review All {{ post_detail.category.title }}</a>
+        <div class="title">{{ post_detail.title }}</div>
+        <div class="time">Updated {{ post_detail.date_added|date:"M.d.Y h:i" }}
     </div>
     <div class="detail-comment">
-        <h2>Comments</h2>
-        {% if not post_detail.comment_model.all %}
-        <p>No comments yet!</p>
-        {% endif %}
-
-        {% for comment in post_detail.comment_model.all %}
-        <article>
-            <strong>{{comment.commenter_name}} - {{comment.date_added}}</strong><br/>
-            {{comment.comment_body}}
-        </article>
-        {% endfor %}
-
-        {% if user.is_authenticated %}
-        <form method="post" action="{% url 'detail_url' post_detail.slug post_detail.id %}">
-            {% csrf_token %}
-            {{ form_detail.as_table }}
-            <input type="submit" value="Add comment">
-        </form>
-        </article>
-        {% endif %}
+        <div class="title">Comments</div>
+        <div class="content">
+            {% if not post_detail.comment_model.all %}
+                <p>No comments yet!</p>
+            {% endif %}
+            {% for comment in post_detail.comment_model.all %}
+                <br/><strong>{{comment.commenter_name}}</strong> <small>{{comment.date_added|date:"m.d h:i" }}</small>
+                <br/>{{comment.comment_body}}
+                <br/>
+            {% endfor %}
+            {% if user.is_authenticated %}
+                <form method="post" action="{% url 'detail_url' post_detail.slug post_detail.id %}">
+                    {% csrf_token %}
+                    {{ form_detail.as_table }}
+                    <input type="submit" value="Add comment">
+                </form>
+            {% endif %}
+        </div>
     </div>
 {% endblock %}
