@@ -148,6 +148,9 @@ footer a{
   flex-direction: column;
   flex-wrap: wrap;
   margin: 50px auto;
+  padding-top:50px;
+  background-color: black;
+  border-radius: 20px;
 }
 .home-container a{
   text-decoration: none;
@@ -188,6 +191,10 @@ footer a{
   margin-top:10px;
   font-size:17px;
   letter-spacing: 1px;
+}
+.home-container .click{
+  background-color:deepskyblue;
+  align-items: right;
 }
 
 
