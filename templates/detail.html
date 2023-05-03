@@ -51,7 +51,7 @@
                 <form method="post" action="{% url 'detail_url' post_detail.slug post_detail.id %}">
                     {% csrf_token %}
                     {{ form_detail.as_table }}
-                    <input type="submit" value="Add comment">
+                    <input type="submit" value="Add Comment">
                 </form>
             {% endif %}
         </div>

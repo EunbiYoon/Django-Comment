@@ -360,22 +360,34 @@ footer a{
 }
 .detail-comment{
   margin:30px 0;
-  background-color: #D0DAEE;
 }
 .detail-comment .title{
   margin:0 auto;
-  padding:15px 0 5px;
+  padding:10px;;
   background-color: #10abff;
 }
 .detail-comment .content{
   text-transform: capitalize;
+  background-color: rgb(208, 233, 254);
 }
 .detail-comment textarea{
+  margin-top:30px;
   width:80%;
-  height: 7vh;
+  height: 12vh;
 }
 .detail-comment input{
-  background-color: #10abff;
+  padding:5px;
+  background-color: #10abff80;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom:10px;
+  border:transparent;
+}
+.detail-comment input:hover{
+  background-color: white;
+  color:#10abff;
+  cursor:pointer;
+  font-weight: 600;
 }
 .detail-comment label{
   display: none;
