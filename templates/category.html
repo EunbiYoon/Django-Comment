@@ -4,12 +4,12 @@
     <div class="category-main">
         <h1 class="title">{{ category_pair.title }}</h1>
         {% for cat in category_pair.post_model.all %}
-            <article>
-                <h2 class="subtitle">{{ cat.title }}</h2>
-                <time>{{ cat.date_added|date:"d M, y h:i" }}</time>
-                <p> {{ cat.intro }} </p>
-                <a href="{% url 'detail_url' cat.slug cat.id%}">Read More</a>
-            </article>
+            <div class="category-each">
+                <div class="title">{{ cat.title }}</div>
+                <div class="time"><time>{{ cat.date_added|date:"d M, y h:i" }}</time>
+                <div class="intro">{{ cat.intro }}</div>
+                <div class="review"><a href="{% url 'detail_url' cat.slug cat.id%}">Read More</a></div>
+            </div>
         {% endfor %}
     </div>
 {% endblock %}

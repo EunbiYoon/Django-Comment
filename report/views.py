@@ -5,10 +5,8 @@ from .forms import CommentForm
 
 def homeView(request):
     posts = list(Post.objects.all())[:3]
-    counts=[1,2,3,4,5]
     context={
         'posts_set':posts,
-        'posts_count':counts
     }
     return render(request, 'home.html', context)
 
