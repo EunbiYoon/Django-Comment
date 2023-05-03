@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
-{% block name %}{{ post_detail.category}} Dashboard{% endblock %}
+{% block title %}Report{% endblock %}
+{% block name %}{{ post_detail.category}} Dashboard on {{ post_detail.title }}{% endblock %}
 
 {% block sidebar %}
     <div class="detail-side">

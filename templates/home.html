@@ -4,7 +4,7 @@
 
 {% block sidebar %}
     <div class="home-history">
-        <h3>Report History</h3>
+        <div class="name">Recent Report</div>
         {% for post in posts_set %}
             <article>
                 <div class="category">{{ post.category }}</div>
@@ -20,15 +20,31 @@
 
 {% block container %}
     <div class="home-container">
-        <a class="box-item1" href="{% url 'category_url' 'bom-comparison' %}">
-            <h2>BOM Comparison</h2>
-        </a>
-        <a class="box-item2" href="{% url 'category_url' 'cost-review' %}">
-            <h2>Cost Review</h2>
-        </a>
-        <a class="box-item3" href="{% url 'category_url' 'vi-activity' %}">
-            <h2>VI Activity</h2>
-        </a>
+        <div class="hexagonArea first">
+            <div class="hexagon">
+                <img src="https://img.icons8.com/ios/50/null/combo-chart--v1.png"/>
+                <h3>BOM Comparion</h3>
+            </div>
+            <div class="hexagon">
+                <img src="https://img.icons8.com/ios/50/null/combo-chart--v1.png"/>
+                <h3>BOM Comparion</h3>
+            </div>
+            <div class="hexagon">
+                <img src="https://img.icons8.com/ios/50/null/combo-chart--v1.png"/>
+                <h3>BOM Comparion</h3>
+            </div>
+        </div>
+        <div class="hexagonArea last">
+            <div class="hexagon">
+                <img src="https://img.icons8.com/ios/50/null/combo-chart--v1.png"/>
+                <h3>BOM Comparion</h3>
+            </div>
+            <div class="hexagon">
+                <img src="https://img.icons8.com/ios/50/null/combo-chart--v1.png"/>
+                <h3>BOM Comparion</h3>
+            </div>
+
+        </div>
     </div>
 {% endblock%}
 
