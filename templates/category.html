@@ -1,15 +1,18 @@
 {% extends 'base.html' %}
 
+{% block name %}
+    <h1 class="category-title">{{ category_pair.title }}</h1>
+{% endblock %}
+
 {% block container %}
-    <div class="category-main">
-        <h1 class="title">{{ category_pair.title }}</h1>
+    <div class="category">
         {% for cat in category_pair.post_model.all %}
-            <div class="category-each">
-                <div class="title">{{ cat.title }}</div>
-                <div class="time"><time>{{ cat.date_added|date:"d M, y h:i" }}</time>
-                <div class="intro">{{ cat.intro }}</div>
-                <div class="review"><a href="{% url 'detail_url' cat.slug cat.id%}">Read More</a></div>
-            </div>
+            <a href="{% url 'detail_url' cat.slug cat.id%}">
+                <div class="category-detail">
+                    {{ cat.title }}
+                    <br/>{{ cat.date_added|date:"d M, y h:i" }}
+                </div>
+            </a>
         {% endfor %}
     </div>
 {% endblock %}

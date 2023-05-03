@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 
+{% block name %}{{ post_detail.category}} Dashboard{% endblock %}
 
 {% block sidebar %}
     <div class="detail-side">
+        <div class="detail-menu">
+            Menu
+        </div>
         <a href="{% url 'home_url' %}">
             <div class="detail-url">Home</div>
         </a>

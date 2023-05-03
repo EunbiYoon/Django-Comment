@@ -6,5 +6,5 @@ urlpatterns = [
     # detail
     path('',homeView,name='home_url'),
     path('<slug:slug>/<int:pk>', detailView, name='detail_url'),
-    path('<slug:slug>/', categoryView, name='category_url'),
+    path('<slug:slug>/', categoryView, name='category_url')
 ]

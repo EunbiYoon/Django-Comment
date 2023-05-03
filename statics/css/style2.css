@@ -22,25 +22,17 @@ body{
 }
 .sidebar{
   grid-column: 1;
-  /* background-color:antiquewhite; */
 }
 .container{
   grid-column: 2;
-  /* background-color:#D0DAEE; */
 }
 .navigator{
   grid-column: 3;
-  /* background-color:pink; */
 }
 
 /*top container*/
-.top .cotainer .user-name .typing-demo {
-  width: 100%;
-  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-size: 2em;
+.top .container h1{
+  padding-left:30px;
 }
 .top .cotainer .user-name .typing-demo span{
   color:green
@@ -321,28 +313,38 @@ footer a{
 }
 
   
-/* detail.html - container */
+/* detail.html - sidebar */
 .detail-side{
   text-align: center;
-  background-color: #17D4FE;
-  padding:5px;
-  margin:20px;
+  padding:3px 5px;
+  margin:20px auto;
+  border: 5px dotted pink;
+  border-radius: 15px;
+  width: 70%;
+}
+.detail-side .detail-menu{
+  border-bottom:  5px dotted pink;
+  padding:10px;
+  font-weight: 800;
+  font-size: 1.2rem;
 }
 .detail-side a{
   text-decoration: none;
 }
 .detail-side .detail-url{
-  background-color:yellow;
   color:black;
   text-decoration: none;
-  margin:20px;
+  margin:20px 5px;
   padding:10px;
 }
 .detail-side .detail-url:hover{
-  color:red;
-  background-color: #1beabd;
+  color:white;
+  background-color:hotpink;
+  border-radius: 5px;
+  font-weight: 800;
 }
 
+/* detail.html - container */
 
 
 /* detail.html - navigator */
@@ -351,7 +353,7 @@ footer a{
 }
 .detail-title{
   margin-bottom: 30px;
-  font-size: 10px;
+  font-size: 1.1rem;
 }
 .detail-comment{
   background-color: #D0DAEE;
@@ -376,13 +378,36 @@ footer a{
 
 
 /* category.html - container */
-.category-main{
-  color:green;
-  background-color: antiquewhite;
-  width: 50%;
+.category-title{
+  color:rgb(255, 59, 92);
+  font-weight: 1000;
+  font-size:2.5rem;
+  text-align: center;
+}
+.category{
+  text-align: center;
+  margin-top:30px;
+  
+}
+.category a{
+  text-decoration:none;
+  margin-top: 50px;;
+}
+.category .category-detail{
+  background-color: #d0ede7;
+  color:black;
   margin: auto;
+  border:1px solid rgb(255, 255, 255);
+  width:30%;
+  margin:5px auto;
+  padding:10px;
+  font-size:1rem
 }
-.category-each{
-  background-color: #10abff;
-  margin:30px;
+.category .category-detail:hover{
+  background-color:rgba(255, 59, 92, 0.357);
+  margin:10px auto;
+  border:5px solid grey;
 }
+
+
+
