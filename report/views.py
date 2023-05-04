@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect, get_object_or_404
+from django.shortcuts import render
 from .models import Category, Post, Comment
 from .forms import CommentForm
 
@@ -26,14 +26,13 @@ def detailView(request, slug, pk):
     else:
         comment_form = CommentForm()    
 
-
     context = {
         'post_detail':post,
         'new_comment': new_comment,
         'form_detail':comment_form,
     }
-
     return render(request, 'detail.html', context)
+
 
 def categoryView(request, slug):
     category=Category.objects.get(slug=slug)
