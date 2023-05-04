@@ -362,7 +362,9 @@ footer a{
 }
 
 /* detail.html - container */
-
+.detail-graph{
+  width: 10%
+}
 
 /* detail.html - navigator */
 .detail-title, .detail-comment{

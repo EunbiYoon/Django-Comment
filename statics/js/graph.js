@@ -1,38 +1,42 @@
-var ctx = document.getElementById("myChart");
-var myChart = new Chart(ctx, {
-type: 'bar',
-data: {
-	labels: ["CS", "IT" , "ECE" , "EE", "ME", "BE"],
-	datasets: [
-	{ label: '# of students',
-		data: [105,124,78,91,62,56],
-		backgroundColor :['rgba(255, 99, 132, 0.2)',
-				'rgba(54, 162, 235, 0.2)',
-				'rgba(255, 206, 86, 0.2)',
-				'rgba(75, 192, 192, 0.2)',
-				'rgba(153, 102, 255, 0.2)',
-				'rgba(255, 159, 64, 0.2)'
-],
 
-borderColor: [
-				'rgba(255,99,132,1)',
-				'rgba(54, 162, 235, 1)',
-				'rgba(255, 206, 86, 1)',
-				'rgba(75, 192, 192, 1)',
-				'rgba(153, 102, 255, 1)',
-				'rgba(255, 159, 64, 1)'
-			],
-borderWidth : 1
-	}
-	]
-},
-options: {
-		scales: {
-			yAxes: [{
-				ticks: {
-					beginAtZero:true
-				}
-			}]
-		}
-	}
+var ctx = document.getElementById("myChart");
+var chart = new Chart(ctx, {
+  type: "bar",
+  data: {
+    labels: ["2020/02/17", "", "2020/02/23", "", "2020/02/29", ""],
+    datasets: [
+      {
+        type: "bar",
+        backgroundColor: "rgba(54, 162, 235, 0.2)",
+        borderColor: "rgba(54, 162, 235, 1)",
+        borderWidth: 1,
+        label: "A",
+        data: [60, 49, 72, 90, 100, 60]
+      },
+	  {
+        type: "bar",
+        backgroundColor:  "rgba(100, 7.84, 57.65, 0.2)",
+        borderColor: "rgba(100, 7.84, 57.65, 1)",
+        borderWidth: 1,
+        label: "B",
+        data: [80, 20, 15, 45, 60, 30]
+      },
+      {
+        type: "line",
+        label: "C",
+        data: [25, 13, 30, 35, 25, 40],
+        lineTension: 0, 
+        fill: false ,
+		borderColor:"red"
+      },
+	  {
+        type: "line",
+        label: "D",
+        data: [30, 45, 20, 5, 25, 15],
+        lineTension: 0, 
+        fill: false,
+		borderColor:"green"
+      }
+    ]
+  }
 });
